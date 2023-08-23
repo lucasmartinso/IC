@@ -40,3 +40,9 @@ Segundo a Organização Mundial de Saúde (OMS) em conjunto com a Organização 
 2. [Modelo matemático de Pennes em Phyton](https://github.com/lucasmartinso/IC/blob/main/Modelo_matem%C3%A1tico_Pennes.ipynb)
 3. [Simplificação do modelo matemático de Pennes em C++](https://github.com/lucasmartinso/IC/blob/main/Compiling_Cpp_Colab.ipynb)
 4. Modelo matemático de Pennes em C++ (ainda não realizado)
+
+*** 
+
+## :one: Simplificação do modelo matemático de Pennes em Phyton
+
+Considera o modelo matemático de Pennes
