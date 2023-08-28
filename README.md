@@ -53,4 +53,12 @@ Segundo a Organização Mundial de Saúde (OMS) em conjunto com a Organização 
 
 ## :one: Simplificação do modelo matemático de Pennes em Phyton
 
-Considera o modelo matemático de Pennes
+Considera o modelo matemático de Pennes simplificado apresentado -figura(2)- em que é retratado uma situação inicial de tratamento sem a entrada de calor no sistema, ou seja, fluxo nulo. Nesse sentido, consideramos MDF para resolução desse problema, a partir de um método matématico iterativo para resolução da EDP elíptica retratada. Além desse, também consideramos trechos de modelagem do método de Cranck-Nicolson, porém a implementação quase como toda é modelada a partir do método iterativo simples. 
+Para resolução, utilizamos dois métodos, Jacobi e Gauss-Seidal, em que para efeito de comparação em média obtemos uma resolução 3x mais ráṕida para Gauss-Seidal, isso se deve ao fato de Seidal considerar passos de solução anterioes ao longo da solução, o que faz com que o processo de convergência ganhe bastante agilidade quanto a isso, computacionalmente falando, menos iterações chegando ao mesmo resultado.
+Assim, sobre o problema modelado retrata 4 tecidos humanos, derme, gordura, músculo e região tumoral e o comportamento dessas regiões mediante a temperatura, na qual considerou-se uma temperatura inicial de 37 Celsius, que está na faixa de temperatura média corporal humana, logo pode-se retirar como conclusão em que apesar das regiões apresentarem temperatura muito semelhantes, a região tumoral apresenta uma leve diferença de temperatura, um pouco maior, quanto mais afastada do tumor mais próximo da temperatura corporal essa será  
+
+<p align="center">
+   <img src="https://i.imgur.com/P3DLqD6.png" width="400" height="500" object-fit="cover"/>
+</p>
+
+Pela implementação em Phyton temos que ...
