@@ -39,7 +39,7 @@ Segundo a Organização Mundial de Saúde (OMS) em conjunto com a Organização 
 1. [Simplificação do modelo matemático de Pennes em Phyton](https://github.com/lucasmartinso/IC/blob/main/pt1_Simula%C3%A7%C3%B5es_num%C3%A9ricas_3D_em_GPUs_de_hipertermia_com_nanopart%C3%ADculas_por_um_modelo_de_bioaquecimento_n%C3%A3o_linear.ipynb)
 2. [Modelo matemático de Pennes em Phyton](https://github.com/lucasmartinso/IC/blob/main/Modelo_matem%C3%A1tico_Pennes.ipynb)
 3. [Simplificação do modelo matemático de Pennes em C++](https://github.com/lucasmartinso/IC/blob/main/Compiling_Cpp_Colab.ipynb)
-4. Modelo matemático de Pennes em C++ (ainda não realizado)
+4. [Modelo matemático de Pennes em C++](https://github.com/lucasmartinso/IC/blob/main/C%2B%2B_Pennes.ipynb)
 
 *** 
 
