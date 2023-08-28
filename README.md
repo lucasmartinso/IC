@@ -29,7 +29,15 @@ Segundo a Organização Mundial de Saúde (OMS) em conjunto com a Organização 
 ## :brain: Modelo Matemático de Pennes
 
 <p align="center">
-   <img src="https://i.imgur.com/j2h9zwp.png" width="700" height="300" object-fit="cover"/>
+   <img src="https://i.imgur.com/zi5kPMY.png" width="900" height="500" object-fit="cover"/>
+</p>
+
+***
+
+## :pinching_hand: Modelo Matemático simplificado de Pennes
+
+<p align="center">
+   <img src="https://i.imgur.com/x9Fwgr7.png" width="900" height="500" object-fit="cover"/>
 </p>
 
 ***
