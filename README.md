@@ -32,6 +32,8 @@ Segundo a Organização Mundial de Saúde (OMS) em conjunto com a Organização 
    <img src="https://i.imgur.com/zi5kPMY.png" width="900" height="500" object-fit="cover"/>
 </p>
 
+Figura 1: modelo matemático de Pennes com legenda descritiva das variáveis
+
 ***
 
 ## :pinching_hand: Modelo Matemático simplificado de Pennes
@@ -39,6 +41,8 @@ Segundo a Organização Mundial de Saúde (OMS) em conjunto com a Organização 
 <p align="center">
    <img src="https://i.imgur.com/x9Fwgr7.png" width="900" height="450" object-fit="cover"/>
 </p>
+
+Figura 2: modelo matemático de Pennes simplificado com legenda descritiva das variáveis
 
 ***
 
@@ -53,12 +57,38 @@ Segundo a Organização Mundial de Saúde (OMS) em conjunto com a Organização 
 
 ## :one: Simplificação do modelo matemático de Pennes em Phyton
 
-Considera o modelo matemático de Pennes simplificado apresentado -figura(2)- em que é retratado uma situação inicial de tratamento sem a entrada de calor no sistema, ou seja, fluxo nulo. Nesse sentido, consideramos MDF para resolução desse problema, a partir de um método matématico iterativo para resolução da EDP elíptica retratada. Além desse, também consideramos trechos de modelagem do método de Cranck-Nicolson, porém a implementação quase como toda é modelada a partir do método iterativo simples. 
-Para resolução, utilizamos dois métodos, Jacobi e Gauss-Seidal, em que para efeito de comparação em média obtemos uma resolução 3x mais ráṕida para Gauss-Seidal, isso se deve ao fato de Seidal considerar passos de solução anterioes ao longo da solução, o que faz com que o processo de convergência ganhe bastante agilidade quanto a isso, computacionalmente falando, menos iterações chegando ao mesmo resultado.
-Assim, sobre o problema modelado retrata 4 tecidos humanos, derme, gordura, músculo e região tumoral e o comportamento dessas regiões mediante a temperatura, na qual considerou-se uma temperatura inicial de 37 Celsius, que está na faixa de temperatura média corporal humana, logo pode-se retirar como conclusão em que apesar das regiões apresentarem temperatura muito semelhantes, a região tumoral apresenta uma leve diferença de temperatura, um pouco maior, quanto mais afastada do tumor mais próximo da temperatura corporal essa será  
+Considera o modelo matemático de Pennes simplificado apresentado -figura(2)- em que é retratado uma situação inicial de tratamento sem a entrada de calor no sistema, ou seja, fluxo nulo. Nesse sentido, consideramos MDF para resolução desse problema, a partir de um método matématico iterativo para resolução da EDP elíptica retratada. Além desse, também consideramos trechos de modelagem do método de Cranck-Nicolson, porém a implementação quase como toda é modelada a partir do método iterativo simples.    
+Para resolução, utilizamos dois métodos, Jacobi e Gauss-Seidal, em que para efeito de comparação em média obtemos uma resolução 3x mais ráṕida para Gauss-Seidal, isso se deve ao fato de Seidal considerar passos de solução anterioes ao longo da solução, o que faz com que o processo de convergência ganhe bastante agilidade, computacionalmente falando, menos iterações chegando ao mesmo resultado.
+Assim sobre o problema modelado, esse retrata 4 tecidos humanos, derme, gordura, músculo e região tumoral e o comportamento dessas regiões mediante a temperatura, na qual considerou-se uma temperatura inicial de 37 Celsius, que está na faixa de temperatura média corporal humana. Logo, pode-se retirar como conclusão em que apesar das regiões apresentarem temperatura muito semelhantes, a região tumoral apresenta uma leve diferença de temperatura, um pouco maior, em que quanto mais afastada a região em análise do espaço tumoral, mais próximo da temperatura corporal essa será, ou seja, menor temperatura vai ter, apesar dessa relação não ser uniforme, mas é uma tendência que pode ser observada na análise da imagem abaixo  
 
 <p align="center">
    <img src="https://i.imgur.com/P3DLqD6.png" width="400" height="500" object-fit="cover"/>
 </p>
 
-Pela implementação em Phyton temos que ...
+Pela implementação em Phyton temos um custo computacional mais elevado, devido a processos pouco otimizados da própria de linguagem de alto nível, fazendo com que o processo de compilação fique mais demorado e extenso para se chegar no resultado, um adendo importante a se fazer é que ao se aumentar o número de iterações máximas ou diminuir o erro relativo para a convergência temos que o processo pode-se tornar até inviável por conta do tempo necessário de compilação, isso se tratando de uma modelagem 2D, para resoluação da mesma em 3D o tempo aumentaria muito consideravelmente e provavelmente se tornaria pouco acessível em Phyton, fazendo a necessidade da implementação em linguagens de mais baixo nível como c/c++ 
+
+*** 
+
+## :two: Modelo matemático de Pennes em Phyton
+
+
+
+***
+
+## :three: Simplificação do modelo matemático de Pennes em C++
+
+Nessa tratativa, temos o mesmo problema de (1), só que agora implementado em c++. Essa troca de linguagem fez com que o processo de compilação ganhasse muita eficiência, já que por se tratar de uma linguagem de mais baixo nivel proporciona processos de otimazação bem mais eficientes, tanto no quesito de tempo quanto em memória, reduzindo drasticamente o tempo de compilação, permitindo com que chegassemos em resultados mais precisos, visto que pode-se aumentar o número máximo de iterações e/ou diminuir o erro de convergência. Importante ressaltar que essa implementação teve uma tratativa mesmo que mais básica orientada a objetos, que em certos casos pode reduzir um pouco da eficiência da aplicação, porém ao mesmo tempo ganhasse mais semântica, facilita a manutenção e leitura do código. 
+
+***
+
+## :four: Modelo matemático de Pennes em C++
+
+Temos o mesmo problema de (2), só que novamente implementado em c++, fazendo com que ganhassemos muita eficência no processo de compilação, segue o mesmo princípio adotado no item anterior, impactando em otimização de memória e tempo
+
+***
+
+## :stars: Contribuições 
+
+Professor coordenador do projeto: [Ruy Freitas Reis](https://github.com/ruyfreis)   
+Aluno orientado: [Lucas Martins Oliveira](https://github.com/lucasmartinso/)   
+Instituição: UFJF 
