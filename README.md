@@ -57,7 +57,7 @@ Figura 2: modelo matemático de Pennes simplificado com legenda descritiva das v
 
 ## :one: Simplificação do modelo matemático de Pennes em Phyton
 
-Considera o modelo matemático de Pennes simplificado apresentado -figura(2)- em que é retratado uma situação inicial de tratamento sem a entrada de calor no sistema, ou seja, fluxo nulo. Nesse sentido, consideramos MDF para resolução desse problema, a partir de um método matématico iterativo para resolução da EDP elíptica retratada. Além desse, também consideramos trechos de modelagem do método de Cranck-Nicolson, porém a implementação quase como toda é modelada a partir do método iterativo simples.    
+Considera o modelo matemático de Pennes simplificado apresentado -figura(2)- em que é retratado uma situação inicial de tratamento sem a entrada de calor no sistema, ou seja, fluxo nulo. Nesse sentido, consideramos o MDF para resolução desse problema, a partir de um método matématico iterativo para resolução da EDP elíptica retratada. Além desse, também consideramos trechos de modelagem do método de Cranck-Nicolson, porém a implementação quase como toda é modelada a partir do método iterativo simples.    
 Para resolução, utilizamos dois métodos, Jacobi e Gauss-Seidal, em que para efeito de comparação em média obtemos uma resolução 3x mais ráṕida para Gauss-Seidal, isso se deve ao fato de Seidal considerar passos de solução anterioes ao longo da solução, o que faz com que o processo de convergência ganhe bastante agilidade, computacionalmente falando, menos iterações chegando ao mesmo resultado.
 Assim sobre o problema modelado, esse retrata 4 tecidos humanos, derme, gordura, músculo e região tumoral e o comportamento dessas regiões mediante a temperatura, na qual considerou-se uma temperatura inicial de 37 Celsius, que está na faixa de temperatura média corporal humana. Logo, pode-se retirar como conclusão em que apesar das regiões apresentarem temperatura muito semelhantes, a região tumoral apresenta uma leve diferença de temperatura, um pouco maior, em que quanto mais afastada a região em análise do espaço tumoral, mais próximo da temperatura corporal essa será, ou seja, menor temperatura vai ter, apesar dessa relação não ser uniforme, mas é uma tendência que pode ser observada na análise da imagem abaixo  
 
@@ -71,7 +71,15 @@ Pela implementação em Phyton temos um custo computacional mais elevado, devido
 
 ## :two: Modelo matemático de Pennes em Phyton
 
+Considera o modelo matemática de Pennes - figura(1) - na qual é retratado a entrada de calor no sistema e o comportamento desse ao longo do espaço e tempo. Nesse aspecto, consideramos o MDF para resolução do problema, a partir de um método matemático de Euler para resolução da EDP parabólica em questão.   
+No que tange o problema matemático, modelamos a região considerando 4 tipos diferentes regiões, sendo 3 deles tecidos humanos, derme, gordura, músculo e a região tumoral. Na aplicação, temos a entrada de calor no sistema por meio de injeções de calor em três pontos diferentes próximos ou na própria região tumoral, através de injeções que contém nanopartículas, e a partir disso temos a resposta de comportamento desses tecidos em relação a essa aplicação de calor.   
+Portanto, pode-se observar que logo após aplicarmos as injeções há um aumento de temperatura incidente princiapalmente sobre a região tumoral, que chega no final a temperaturas de aproximadamente de 48 graus, chegando ao objetivo do experimento que é elevar a tempratura dessa região a fim de levar a necrose das células malignas, isso impactando minimamente no tecido saudável, que até apresenta uma pequena elevação de temperatura( região mais próxima da região tumoral), mas que gera pouquissímo impacto levando em consideração ao todo que se mantém bastante estável no decorrer do tempo
 
+<p align="center">
+   <img src="https://i.imgur.com/XaCV8aK.gif" width="600" height="450" object-fit="cover"/>
+</p>
+
+Pela implementação em Phyton temos um custo computacional mais elevado, devido a processos pouco otimizados da própria de linguagem de alto nível, fazendo com que o processo de compilação fique mais demorado e extenso para se chegar no resultado, um adendo importante a se fazer é que ao se aumentar o número de passos de tempo temos que o processo pode-se tornar até inviável por conta do tempo necessário de compilação, isso se tratando de uma modelagem 2D, para resoluação da mesma em 3D o tempo aumentaria muito consideravelmente e provavelmente se tornaria pouco acessível em Phyton, fazendo a necessidade da implementação em linguagens de mais baixo nível como c/c++ afim de melhorar processos de otimização
 
 ***
 
@@ -92,3 +100,4 @@ Temos o mesmo problema de (2), só que novamente implementado em c++, fazendo co
 Professor coordenador do projeto: [Ruy Freitas Reis](https://github.com/ruyfreis)   
 Aluno orientado: [Lucas Martins Oliveira](https://github.com/lucasmartinso/)   
 Instituição: UFJF 
+Intituto financiador: FAPEMIG
